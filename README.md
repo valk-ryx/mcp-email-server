@@ -109,6 +109,22 @@ If `docker` is avaliable, you can try use docker image, but you may need to conf
 }
 ```
 
+### HTTP Transport
+
+For tools like Poke by Interaction that require HTTP transport, you can run the server with HTTP support:
+
+```bash
+uvx mcp-email-server@latest http --host localhost --port 9557
+```
+
+Or with a local installation:
+
+```bash
+mcp-email-server http --host localhost --port 9557
+```
+
+The server will start an HTTP endpoint on the specified host and port that accepts MCP protocol messages.
+
 ### Installing via Smithery
 
 To install Email Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@ai-zerolab/mcp-email-server):
