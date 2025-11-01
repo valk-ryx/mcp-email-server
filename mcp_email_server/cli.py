@@ -22,6 +22,16 @@ def sse(
 
 
 @app.command()
+def http(
+    host: str = "localhost",
+    port: int = 9557,
+):
+    mcp.settings.host = host
+    mcp.settings.port = port
+    mcp.run(transport="http")
+
+
+@app.command()
 def ui():
     from mcp_email_server.ui import main as ui_main
 
